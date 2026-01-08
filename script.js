@@ -1,29 +1,15 @@
-const stackBtn = document.getElementById("stack");
-const spreadBtn = document.getElementById("spread");
-
-function stack() {
-  console.log('stacking');
-  $(".card").each(function(e) {
-
-    setTimeout(function() {
-      $(".card").eq(e).attr("class", "card");
-    }, e * 150)
-    
-  }
-  
+document.querySelector('.stack').addEventListener('click', () => {
+  document.querySelectorAll('.card').forEach((card, i) => {
+    setTimeout(() => {
+      card.className = 'card';
+    }, i * 150);
+  });
 });
 
-function spread() {
-  console.log('spreading');
-  $(".card").each(function(e) {
-
-    setTimeout(function() {
-      $(".card").eq(e).attr("class", "card ani" + e);
-    }, e * 150)
-    
+document.querySelector('.spread').addEventListener('click', () => {
+  document.querySelectorAll('.card').forEach((card, i) => {
+    setTimeout(() => {
+      card.className = 'card ani' + i;
+    }, i * 150);
   });
-  
-}
-
-stackBtn.addEventListener("click", stack);
-spreadBtn.addEventListener("click", spread);
+});
