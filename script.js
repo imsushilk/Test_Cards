@@ -1,4 +1,4 @@
-/*document.querySelector('.stack').addEventListener('click', () => {
+document.querySelector('.stack').addEventListener('click', () => {
   document.querySelectorAll('.card').forEach((card, i) => {
     setTimeout(() => {
       card.className = 'card';
@@ -12,11 +12,11 @@ document.querySelector('.spread').addEventListener('click', () => {
       card.className = 'card ani' + i;
     }, i * 150);
   });
-});*/
+});
 
 document.querySelectorAll('.defcard').forEach((card) => {
-  console.log(card.classList);
   card.addEventListener('click', () => {
+    console.log(card.classList);
     if (card.classList.contains('ani')) {
       document.querySelectorAll('.defcard').forEach((card, i) => {
         setTimeout(() => {
