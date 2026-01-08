@@ -1,4 +1,7 @@
-$('.stack').click(function() {
+const stackBtn = document.getElementById("stack");
+const spreadBtn = document.getElementById("spread");
+
+stackBtn.click(function() {
   console.log('stacking');
   $(".card").each(function(e) {
 
@@ -10,7 +13,7 @@ $('.stack').click(function() {
   
 });
 
-$('.spread').click(function() {
+spreadBtn.click(function() {
   console.log('spreading');
   $(".card").each(function(e) {
 
