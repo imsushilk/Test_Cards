@@ -1,7 +1,7 @@
 const stackBtn = document.getElementById("stack");
 const spreadBtn = document.getElementById("spread");
 
-stackBtn.click(function() {
+function stack() {
   console.log('stacking');
   $(".card").each(function(e) {
 
@@ -9,11 +9,11 @@ stackBtn.click(function() {
       $(".card").eq(e).attr("class", "card");
     }, e * 150)
     
-  });
+  }
   
 });
 
-spreadBtn.click(function() {
+function spread() {
   console.log('spreading');
   $(".card").each(function(e) {
 
@@ -23,4 +23,7 @@ spreadBtn.click(function() {
     
   });
   
-});
+}
+
+stackBtn.addEventListener("click", stack);
+spreadBtn.addEventListener("click", spread);
