@@ -15,7 +15,7 @@ document.querySelectorAll('.defcard').forEach((card) => {
       document.querySelectorAll('.defcard').forEach((card, i) => {
         setTimeout(() => {
           card.className = 'defcard card';
-        }, i * 150);
+        }, i * 450);
       });
     }
   });
