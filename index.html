@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Simple Lottie Web Example</title>
-</head>
-<body>
-  <!-- 1. Load the Lottie web player script -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-  <!-- 2. Add the Lottie player element -->
-  <lottie-player
-    id="myLottie"
-    src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
-    background="transparent"
-    speed="1"
-    style="width: 300px; height: 300px; cursor: pointer;"
-    loop
-    autoplay>
-  </lottie-player>
-
-  <!-- 3. Simple interactivity: click to play/pause -->
-  <script>
-    const player = document.getElementById('myLottie');
-
-    let isPlaying = true;
-
-    player.addEventListener('click', () => {
-      if (isPlaying) {
-        player.pause();
-      } else {
-        player.play();
-      }
-      isPlaying = !isPlaying;
-    });
-  </script>
-</body>
-</html>
+<div class="grid">
+  <ul class="list">
+    <li class="card"></li>
+    <li class="card"></li>
+    <li class="card"></li>
+    <li class="card"></li>
+    <li class="card"></li>
+    <li class="card"></li>
+    <li class="card"></li>
+    <li class="card"></li>
+    <li class="card"></li>
+  </ul>
+  
+  <button class="stack">Stack</button>
+  <button class="spread">Spread</button>
+  
+</div>
