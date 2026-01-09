@@ -11,7 +11,6 @@ for (let i = 0; i < numberOfCards; i++) {
 // Add click event listeners to cards
 document.querySelectorAll(".defcard").forEach((card) => {
   card.addEventListener("click", () => {
-    console.log(card.className);
     if (card.className.includes("ani")) {
       document.querySelectorAll(".defcard").forEach((card, i) => {
         setTimeout(() => {
@@ -24,7 +23,7 @@ document.querySelectorAll(".defcard").forEach((card) => {
         setTimeout(() => {
           card.className = `defcard card ani`;
           let cardsSpace = (50 / document.querySelectorAll(".defcard").length) * i;
-          card.style.right = `${cardsSpace + 22}%`;
+          card.style.right = `${cardsSpace + 15}%`;
         }, i * 150);
       });
       // setTimeout(() => {
