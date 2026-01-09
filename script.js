@@ -1,3 +1,14 @@
+//Generate cards dynamically
+const list = document.querySelector(".list");
+const numberOfCards = 21; // Define the number of cards
+
+for (let i = 0; i < numberOfCards; i++) {
+  const listItem = document.createElement("li");
+  listItem.className = "defcard card";
+  list.appendChild(listItem);
+}
+
+// Add click event listeners to cards
 document.querySelectorAll(".defcard").forEach((card) => {
   card.addEventListener("click", () => {
     console.log(card.className);
@@ -6,7 +17,7 @@ document.querySelectorAll(".defcard").forEach((card) => {
         setTimeout(() => {
           card.className = "defcard card";
           card.style = '';
-        }, i * 150);
+        }, i * 0.75 * 150);
       });
     } else {
       document.querySelectorAll(".defcard").forEach((card, i) => {
@@ -27,11 +38,3 @@ document.querySelectorAll(".defcard").forEach((card) => {
     }
   });
 });
-
-const getRandomColor = () => {
-  // Generate a random number between 0 and 0xFFFFFF (16777215)
-  let randomNumber = Math.floor(Math.random() * 16777215); 
-  // Convert the number to a hex string and pad with zeros if necessary
-  let color = "#" + randomNumber.toString(16).padStart(6, '0');
-  return color.toUpperCase();
-};
