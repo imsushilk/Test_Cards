@@ -1,5 +1,5 @@
 body {
-  background-color: #100e17;
+  background-color: #292733;
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
   margin: 0;
@@ -39,7 +39,7 @@ body {
 
   float: left;
   width: 15em;
-  height: 25em;
+  height: 23em;
   background-color: #17141d;
 
   display: flex;
@@ -51,7 +51,7 @@ body {
 
 .ani {
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   box-shadow: -1rem 0.2rem 0.5rem #000;
 }
 

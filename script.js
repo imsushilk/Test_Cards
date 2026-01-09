@@ -23,7 +23,7 @@ document.querySelectorAll(".defcard").forEach((card) => {
         setTimeout(() => {
           card.className = `defcard card ani`;
           let cardsSpace = (50 / document.querySelectorAll(".defcard").length) * i;
-          card.style.right = `${cardsSpace + 15}%`;
+          card.style.right = `${cardsSpace + 20}%`;
         }, i * 150);
       });
       // setTimeout(() => {
