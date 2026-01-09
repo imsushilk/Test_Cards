@@ -70,6 +70,7 @@ body {
 
 .ani {
   position: absolute;
+  right: var(--spacing);
   bottom: 40%;
   box-shadow: -1rem 0.2rem 0.5rem #000;
 }

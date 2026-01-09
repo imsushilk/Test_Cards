@@ -26,7 +26,7 @@ function spreadCards() {
       card.className = "defaultcard card ani";
       let cardsSpace =
         (50 / document.querySelectorAll(".defaultcard").length) * i;
-      card.style.right = `${cardsSpace + 20}%`;
+      card.style.setProperty("--spacing", `${cardsSpace + 20}%`);
     }, i * 150);
   });
 }
@@ -74,8 +74,8 @@ document.addEventListener("touchend", function (event) {
     } else {
       console.log("Double-tapped in empty space");
       unhoverCards().then(() => {
-      resetCards();
-    });
+        resetCards();
+      });
     }
   }
 
@@ -98,10 +98,10 @@ document.addEventListener(
 );
 
 function flipCard(elem) {
-    elem.classList.add("flipping");
-    elem.addEventListener("transitionend", function handler() {
-        elem.classList.toggle("flippedcard");
-        elem.removeEventListener("transitionend", handler);
-        elem.classList.remove("flipping");
-    })
+  elem.classList.add("flipping");
+  elem.addEventListener("transitionend", function handler() {
+    elem.classList.toggle("flippedcard");
+    elem.removeEventListener("transitionend", handler);
+    elem.classList.remove("flipping");
+  });
 }
