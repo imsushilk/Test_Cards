@@ -11,6 +11,7 @@ for (let i = 0; i < numberOfCards; i++) {
 // Add click event listeners to cards
 document.querySelectorAll(".defcard").forEach((card) => {
   card.addEventListener("click", () => {
+    console.log('click');
     if (card.className.includes("ani")) {
       document.querySelectorAll(".defcard").forEach((card, i) => {
         setTimeout(() => {
@@ -36,4 +37,14 @@ document.querySelectorAll(".defcard").forEach((card) => {
       // }, 1500);
     }
   });
+});
+
+document.body.addEventListener("touchstart", function () {
+  document.body.classList.add("no-hover");
+  console.log('touchstart');
+});
+
+document.body.addEventListener("mousemove", function () {
+  document.body.classList.remove("no-hover");
+  console.log('mousemove');
 });

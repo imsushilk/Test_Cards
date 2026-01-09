@@ -30,7 +30,7 @@ body {
 
   background-color: #17141d;
   right: 40%;
-  bottom: 30%;
+  bottom: 40%;
   box-shadow: -0.4rem 0.1rem 0.1rem #000;
 }
 
@@ -44,14 +44,13 @@ body {
 
   display: flex;
   position: absolute;
-  bottom: 30%;
   margin: 30px 0 15px 15px;
   border-radius: 10%;
 }
 
 .ani {
   position: absolute;
-  bottom: 40%;
+  bottom: 50%;
   box-shadow: -1rem 0.2rem 0.5rem #000;
 }
 
@@ -82,3 +81,7 @@ body {
 /* .list:hover .ani:not(:hover) {
   bottom: 45%; 
 } */
+
+.no-hover .ani:hover {
+  pointer-events: none;
+}
