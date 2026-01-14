@@ -1,5 +1,5 @@
 // Generate cards dynamically
-export function generateCards(containerSelector, numberOfCards = 14) {
+export function generateCards(containerSelector, numberOfCards = 7) {
   const container = document.querySelector(containerSelector);
   for (let i = 0; i < numberOfCards; i++) {
     const listItem = document.createElement("li");

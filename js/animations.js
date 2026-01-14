@@ -14,7 +14,12 @@ export function spreadCards() {
       card.className = "defaultcard ani";
       const cardsSpace =
         (50 / document.querySelectorAll(".defaultcard").length) * i;
-      card.style.setProperty("--spacing", `${cardsSpace + 20}%`);
+      //   card.style.setProperty("--spacing", `${cardsSpace + 10}%`);
+      card.style.setProperty("--index", `${i}`);
+      card.style.setProperty(
+        "--numberOfCards",
+        `${document.querySelectorAll(".defaultcard").length}`
+      );
     }, i * 150);
   });
 }
