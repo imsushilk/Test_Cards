@@ -28,6 +28,9 @@
     display: flex;
     position: absolute;
     border-radius: 10%;
+    border-width: thin;
+    border-style: inset;
+    border-color: black;
 }
 
 .ani.flippedcard {
